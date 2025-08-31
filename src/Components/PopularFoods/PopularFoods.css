@@ -1,0 +1,118 @@
+.popular-heading {
+  font-size: 32px;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* margin-left: 90px; */
+  font-weight: 900;
+}
+.food-item-container img {
+  width: 330px;
+  border-radius: 20px;
+  object-fit: fill;
+  height: 270px;
+  transition: all 0.5s ease-in-out;
+}
+.food-item-container {
+  width: 330px;
+  line-height: 20px;
+}
+.name-place-retings {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+}
+.ratings {
+  background-color: green;
+  text-align: center;
+  padding: 6px;
+  color: white;
+  border-radius: 10px;
+  margin-top: 12px;
+  width: 50px;
+  line-height: 1px;
+}
+.price,
+.name p {
+  color: rgb(94, 94, 94);
+  font-size: 15px;
+  font-weight: 500;
+}
+.ratings-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: right;
+  text-align: right;
+}
+.most-popular-foods {
+  display: grid;
+  grid-template-columns: repeat(3, 370px);
+  place-content: center;
+  place-items: center;
+  margin-top: 40px;
+  column-gap: 10px;
+  row-gap: 30px;
+}
+.food-item-container:hover {
+  background-color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 1px 1px 10px 1px lightgray;
+}
+.popular-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.all-products-button {
+  border: 2px lightgray solid;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 200px;
+}
+.all-products-button:hover {
+  background-color: rgb(83, 83, 81);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  color: white;
+}
+.most-popular-result {
+  background-color: rgb(23, 23, 23);
+  padding: 10px;
+  border-radius: 20px;
+}
+.most-popular-result:hover {
+  background-color: rgb(19, 19, 19);
+  color: white;
+  box-shadow: 1px 1px 10px 1px rgb(22, 22, 22);
+}
+
+@media (max-width: 1154px) and (min-width: 800px) {
+  .most-popular-foods {
+    display: grid;
+    grid-template-columns: repeat(2, 370px);
+  }
+}
+@media (max-width: 800px) and (min-width: 300px) {
+  .most-popular-foods {
+    display: grid;
+    grid-template-columns: repeat(1, 370px);
+  }
+  .popular-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+  }
+  .all-products-button {
+    margin-top: 50px;
+  }
+}

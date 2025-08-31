@@ -1,0 +1,52 @@
+.food-categories-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-content: center;
+  place-items: center;
+  row-gap: 20px;
+  column-gap: 20px;
+  margin-top: 20px;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+.food-categories {
+  border: 2px lightgray solid;
+  height: 200px;
+  width: 250px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 1px 1px 10px 1px rgb(234, 234, 234);
+  z-index: 1;
+  background-color: rgb(230, 230, 230);
+}
+.food-categories p {
+  position: absolute;
+  top: 30%;
+  right: 50%;
+  left: 35%;
+  font-size: 23px;
+}
+.food-categories {
+  cursor: pointer;
+}
+
+.food-categories-result{
+  background-color: rgb(57, 57, 57);
+  color: white;
+  border: 1px black solid;
+  box-shadow: 1px 1px 10px 1px rgb(14, 14, 14);
+  
+}
+
+@media (max-width: 1000px) and (min-width: 500px) {
+  .food-categories-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) and (min-width: 300px) {
+  .food-categories-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

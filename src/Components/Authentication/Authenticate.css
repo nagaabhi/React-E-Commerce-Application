@@ -1,0 +1,86 @@
+/* Container */
+.login-sign-up-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #d5e2f7);
+  padding: 20px;
+}
+
+/* Form */
+.login-sign-up-container form {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 120%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Input fields */
+.login-sign-up-container input {
+  width: 95%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.login-sign-up-container input:focus {
+  border-color: #2575fc;
+  outline: none;
+  box-shadow: 0 0 5px rgba(37, 117, 252, 0.3);
+}
+
+/* Submit button */
+.submit-button button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #2575fc;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button button:hover {
+  background: #1a5dd8;
+}
+
+/* Account toggle */
+.dont-have-account {
+  text-align: center;
+  font-size: 14px;
+  color: #444;
+}
+
+.dont-have-account span {
+  color: #2575fc;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dont-have-account span:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-sign-up-container form {
+    padding: 20px;
+    gap: 14px;
+  }
+
+  .submit-button button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}

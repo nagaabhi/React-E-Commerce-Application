@@ -1,0 +1,60 @@
+.main-banner-container {
+  background-image: url("./src/assets/top-view-indian-food-frame-with-copy-space.jpg");
+  height: 500px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.main-banner-container {
+  position: relative;
+  margin-top: 30px;
+}
+.main-banner-container p {
+  color: white;
+  width: 500px;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: block;
+  position: absolute;
+  top: 35%;
+  left: 8%;
+  font-size: 17px;
+  line-height: 30px;
+}
+.main-banner-container button {
+  position: absolute;
+  top: 60%;
+  left: 8%;
+  width: 450px;
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px lightgray solid;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.main-banner-container button:hover {
+  background-color: rgb(176, 176, 176);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .main-banner-container {
+    height: 40vh;
+    border-radius: 6px;
+    padding: 0.4rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .main-banner-container p {
+    font-size: 10px;
+    width: 300px;
+    line-height: 20px;
+  }
+  .main-banner-container button {
+    width: 300px;
+  }
+}
