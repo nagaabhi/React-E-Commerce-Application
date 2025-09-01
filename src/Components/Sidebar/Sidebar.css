@@ -1,0 +1,46 @@
+.side-bar-container {
+  background-color: whitesmoke;
+  color: black;
+  height: 100vh;
+  width: 300px;
+  border-radius: 10px;
+  position: absolute;
+  right: 0;
+  top: 80px;
+  z-index: 1;
+}
+
+.cros-icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.application-navigations div {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 10px;
+}
+.application-navigations {
+  margin-top: 60px;
+  padding: 5px;
+}
+.application-navigations button {
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+.side-bar-dark-mode {
+  background-color: rgb(29, 29, 29);
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+.dark-application-navigation div {
+  background-color: rgb(57, 57, 57);
+  color: whitesmoke;
+}

@@ -20,7 +20,7 @@ const AuthContext = ({ children }) => {
     const savedUser = localStorage.getItem("login");
     return savedUser ? JSON.parse(savedUser) : [{ isAuthenticated: false }];
   });
-  console.log(userLogin);
+
 
   const [mode, setMode] = useState(() => {
     const theme = localStorage.getItem("mode");
@@ -36,7 +36,7 @@ const AuthContext = ({ children }) => {
       ...prev,
       type: prev.type === "Dark" ? "Light" : "Dark",
     }));
-    console.log(mode);
+
   };
 
   useEffect(() => {

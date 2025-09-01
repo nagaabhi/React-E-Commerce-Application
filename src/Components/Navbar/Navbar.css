@@ -67,3 +67,29 @@
     display: none;
   }
 }
+
+@media (max-width: 650px) and (min-width: 415px) {
+  .navbar-middle {
+    display: none;
+  }
+
+  .dark-light-toggle {
+    display: none;
+  }
+  .login-button {
+    display: none;
+  }
+  .navbar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 1300px) and (min-width: 1000px) {
+  .responsive-navbar-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}

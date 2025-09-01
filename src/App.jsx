@@ -12,9 +12,11 @@ import { useContext } from "react";
 import { DataContext } from "./Components/Context/DataContext";
 import Categories from "./Components/Categaries/Categories";
 import About from "./Components/About/About";
+import Sidebar from "./Components/Sidebar/Sidebar";
+import { useState } from "react";
 const App = () => {
-
   const { mode } = useContext(DataContext);
+  const [showNavbar, setShowNavbar] = useState(false);
 
   if (mode.type === "Dark") {
     document.body.style.backgroundColor = " rgba(34, 34, 34, 1)";
@@ -27,7 +29,7 @@ const App = () => {
   }
   return (
     <>
-      <Navbar />
+      <Navbar showNavbar={setShowNavbar} />
       <Routes>
         <Route
           path="/home"
@@ -46,6 +48,7 @@ const App = () => {
         <Route path="/categories" element={<Categories />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      {showNavbar && <Sidebar removeNavbar={setShowNavbar} />}
     </>
   );
 };

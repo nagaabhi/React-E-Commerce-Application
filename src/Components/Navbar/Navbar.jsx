@@ -1,11 +1,24 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { DataContext } from "../Context/DataContext";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
+import { IoMdMenu } from "react-icons/io";
 
-const Navbar = () => {
+const Navbar = ({ showNavbar }) => {
   const { setAuthenticate, mode, updateAppMode, userLogin } =
     useContext(DataContext);
+
+  const [windowsWidth, setWindowsWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleWindowsWidth = () => {
+      setWindowsWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleWindowsWidth);
+    console.log(windowsWidth);
+  }, [windowsWidth]);
+
   return (
     <>
       <div className="navbar-container">
@@ -27,7 +40,7 @@ const Navbar = () => {
               <li>Categories</li>
             </Link>
 
-            <Link to="/about" style={{textDecoration : "none"}}>
+            <Link to="/about" style={{ textDecoration: "none" }}>
               <li>About</li>
             </Link>
 
@@ -36,19 +49,27 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-right">
-          <div className="login-button">
-            <Link to="/login">
-              <button onClick={() => setAuthenticate("login")}>
-                {userLogin.isAuthenticated ? "login" : "logout"}
-              </button>
-            </Link>
-          </div>
+          {windowsWidth <= 415 ? (
+            <div onClick={() => showNavbar(true)}>
+              <IoMdMenu size="45" />
+            </div>
+          ) : (
+            <div className="responsive-navbar-right">
+              <div className="login-button">
+                <Link to="/login">
+                  <button onClick={() => setAuthenticate("login")}>
+                    {userLogin.isAuthenticated ? "login" : "logout"}
+                  </button>
+                </Link>
+              </div>
 
-          <div className="dark-light-toggle">
-            <button onClick={updateAppMode}>
-              {mode.type === "Dark" ? "☀️" : "🌙"}
-            </button>
-          </div>
+              <div className="dark-light-toggle">
+                <button onClick={updateAppMode}>
+                  {mode.type === "Dark" ? "☀️" : "🌙"}
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </>
